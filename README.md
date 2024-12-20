@@ -6,39 +6,20 @@
 
 ![Fildem](https://user-images.githubusercontent.com/19943481/95288612-1d272a80-083f-11eb-9400-be88f61e054d.png)
 
-This project is a fork of Fildem V1. Due to the original creator abandoning the project, I've decided to keep this project upto-date.
+This project is a fork of Fildem V1 **(V2 is not for Ubuntu20.04)**. Due to the original creator abandoning the project, I've decided to keep this project upto-date.
 View current plans and ideas at https://github.com/Weather-OS/Fildem-v2/discussions.
 
 You can also bring a HUD menu with Alt + Space (on Xorg).
 
 ## Installation
+> Verified on **Ubuntu(22.04)**
 
-### Extension
 
-~~To install the extension, download it from the [Gnome extensions website](https://extensions.gnome.org/extension/4114/fildem-global-menu/).~~   
-Deprecated extension. Will be updated soon.   
-You can install the extension by moving `fildemGMenu@gonza.com` to `~/.local/share/gnome-shell/extensions/`
+1.  `sudo apt install libbamf3-dev bamfdaemon libkeybinder-3.0-dev appmenu-gtk2-module appmenu-gtk3-module unity-gtk-module-common`   
 
-### Ubuntu
+2. `cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/`
 
-~~Download the .deb file from the releases section and run `sudo apt install ./fildem_*.deb`~~   
-Build is not available yet. I'm currently working on updating the build file.   
-
-### Arch
-
-~~Download the .zst file from the releases section and run `sudo pacman -U ./python3-fildem*.zst`~~   
-Build is not available yet. I'm currently working on updating the build file.    
-You can build a working package with `makepkg -si`
-
-### Building from source
-
-#### Dependencies
-  Arch: `bamf appmenu-gtk-module libkeybinder3 libdbusmenu-gtk2 libdbusmenu-gtk3 libdbusmenu-qt5`   
-  Ubuntu `libbamf3-dev bamfdaemon libkeybinder-3.0-dev appmenu-gtk2-module appmenu-gtk3-module unity-gtk-module-common`   
-
-Install the extension by moving `fildemGMenu@gonza.com` to `~/.local/share/gnome-shell/extensions/`.   
-
-Run `setup.py install --optimize=1`.
+3. Run: `sudo python3 setup.py install --optimize=1`.
 
 You will be asked if you want to run fildem at startup, This is completely optional, but it is recommended.
 
